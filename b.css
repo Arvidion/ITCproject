@@ -1,0 +1,354 @@
+:root{
+    --primary: #1a4846;
+    --bg: #e6dfcf;
+    --word: #c5a57e;
+    --side:#e1944c;
+}
+
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: var(--bg);
+    color: var(--primary);
+    color: #e6dfcf;
+    min-height: 2000px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    background-color: #1a4846;
+    padding: 22px 7%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+}
+
+.navbar .nav{
+    margin-left: 400px;
+}
+
+.navbar .navlogo{
+    width: 5%;
+    border-radius: 5px;
+}
+
+.navbar .logo{
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--side);
+}
+
+.navbar .nav a{
+    color: #fff;
+    display: inline-block;
+    font-size: 20px;
+    margin: 0 16px;
+}
+
+.navbar .nav a:hover{
+    color: var(--word);
+}
+
+.navbar .nav a::after{
+    content: '';
+    display: block;
+    padding-bottom: 8px;
+    border-bottom: 1.6px solid;
+    transform: scaleX(0);
+    transition: 0.1s;
+}
+
+.navbar .nav a:hover::after{
+    transform: scaleX(0.75);
+}
+
+.navbar .navbarextra a{
+    color: #fff;
+    margin: 0 8px;
+}
+
+.navbar .navbarextra a:hover{
+    color: var(--word);
+}
+
+#hamenu{
+    display: none;
+}
+
+.main{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(0deg, #e6dfcf  5%, rgba(255, 255, 255, 0) 20%), url('img/r11.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.main .konten{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.main .konten .isi{
+    padding: 24px;
+    background: rgba(0, 0, 0, .3);
+    border-radius: 20px;
+    width: 450px;
+    height: 350px;
+}
+
+.main .konten h1{
+    font-size: 80px;
+    color: #e1944c;
+    text-shadow: 1px 1px 3px rgba(1,1,3,0.5);
+    margin-bottom: 10px;
+}
+
+.main .konten h1 span{
+    color: #c5a57e;
+}
+
+.main .konten .isi .book{
+    display: inline-flex;
+    width: 250px;
+    height: 90px;
+    margin-top: 50px;
+    color: #fff;
+    font-size: 35px;
+    background-color: #e1944c;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px rgba(1,1,3,0.5);
+    filter: brightness(50%);
+}
+
+.main .konten .isi .book:hover{
+    filter: brightness(100%);
+    transition: 0.25s;
+}
+
+.fl{
+    padding: 0 80px;
+    display: flex;
+}
+
+.fl .fac{
+    width: 1300px;
+    font-size: 18px;
+    color: #1a4846;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 50px;
+}
+
+.fl .fac .a{
+    display: block;
+    padding-top: 20px;
+}
+
+.foto{
+    margin: 10px 150px;
+    display: grid;
+}
+
+.foto .afoto{
+    object-fit: cover;
+    text-align: center;
+}
+
+.fl .lok{
+    background-color: #1a4846;
+    display:grid;
+    max-width: 400px;
+    height: 480px;
+    margin: 50px 0;
+    margin-right: 150px;
+    border-radius: 20px;
+}
+
+.fl .lok .alamat{
+    width: 100%;
+    text-align: justify;
+    padding: 30px 30px;
+    font-size: 16px;
+}
+
+.fl .lok .maps{
+    align-self: center;
+    text-align: right;
+    width: 265px;
+    padding-right: 20px;
+    margin-left: 50px;
+}
+
+.fl .lok .maps img{
+    width: 200px;
+    height: 200px;
+    object-fit:cover ;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.fl .lok .maps img:hover{
+    filter: brightness(70%);
+}
+
+footer{
+    display: block;
+    text-align: center;
+    justify-content: center;
+    background-color:#1a4846;
+    height: 200px;
+    margin-top: 50px;
+    padding: 30px;
+}
+
+.ph{
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.ig a{
+    color: var(--bg);
+    display: flex;
+    padding-top: 5px;
+    justify-content: center;
+    margin-left: -70px;
+}
+
+p{
+    padding-left: 10px;
+}
+
+.tag{
+    color: #486d6b
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px){
+    html{
+        font-size: 62.5%;
+    }
+
+    #hamenu{
+        display: inline-block;
+    }
+
+    .navbar .nav{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #fff;
+        width: 250px;
+        height: 100vh;
+        transition: 0.2s;
+    }
+
+    .navbar .navlogo{
+        width: 45px;
+    }
+
+    .navbar .nav.active{
+        right: 0;
+    }
+
+    .navbar .nav a{
+        color: var(--word);
+        display: block;
+        margin: 10px;
+        padding: 20px;
+        font-size: 25px;
+    }
+
+    .navbar .nav a:hover:after{
+        transform: scaleX(0.3);
+    }
+
+    .navbar .nav a::after{
+        transform-origin: 0 0;
+    }
+
+    .main .konten .isi{
+        margin-top: -50px;
+        font-size: 24px;
+        width: 350px;
+    }
+
+    .main .konten .isi h1{
+        font-size: 75px;
+    }
+
+    .main .konten .isi .book{
+        font-size: 20px;
+        width: 170px;
+        height: 70px;
+        margin-top: 20px;
+        filter: brightness(100%);
+    }
+
+    .fl{
+        padding: 0;
+        display: block;
+    }
+
+    .fl .fac{
+        max-width: 100%;
+        padding: 0 30px;
+    }
+
+    .foto{
+        margin: 0;
+        height: 525px;
+    }
+
+    .foto .afoto{
+        height: 170px;
+    }
+
+    .fl .lok{
+        display: block;
+        height: 460px;
+        margin: 20px;
+        border-radius: 10px;
+    }
+
+    .fl .lok .alamat{
+        max-width:max-content;
+    }
+
+    .foto{
+        height: 1090px;
+        padding: 0 24px;
+    }
+
+    .foto .afoto img{
+        width: 45%;
+    }
+
+    footer{
+        display: block;
+        font-size: 15px;
+    }
+} 
